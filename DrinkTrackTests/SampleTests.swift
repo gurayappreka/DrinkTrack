@@ -1,11 +1,9 @@
-import Testing
+import XCTest
 @testable import DrinkTrack
 
-@Suite("Sample Tests")
-struct SampleTests {
+final class SampleTests: XCTestCase {
 
-    @Test("App launches successfully")
-    func appLaunches() {
-        #expect(true)
+    func testAppLaunchesSuccessfully() {
+        XCTAssertTrue(true)
     }
 }
