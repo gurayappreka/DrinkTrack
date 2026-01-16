@@ -12,6 +12,13 @@
 		E81234560003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81234550003 /* Assets.xcassets */; };
 		E81234560004 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81234550004 /* Preview Assets.xcassets */; };
 		E81234560010 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550010 /* SampleTests.swift */; };
+		E81234560020 /* WaterIntake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550020 /* WaterIntake.swift */; };
+		E81234560021 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550021 /* UserSettings.swift */; };
+		E81234560022 /* DailyProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550022 /* DailyProgress.swift */; };
+		E81234560023 /* WaterIntakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550023 /* WaterIntakeService.swift */; };
+		E81234560024 /* WaterIntakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550024 /* WaterIntakeTests.swift */; };
+		E81234560025 /* DailyProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550025 /* DailyProgressTests.swift */; };
+		E81234560026 /* UserSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550026 /* UserSettingsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +37,13 @@
 		E81234550003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81234550004 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E81234550010 /* SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTests.swift; sourceTree = "<group>"; };
+		E81234550020 /* WaterIntake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterIntake.swift; sourceTree = "<group>"; };
+		E81234550021 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		E81234550022 /* DailyProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyProgress.swift; sourceTree = "<group>"; };
+		E81234550023 /* WaterIntakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterIntakeService.swift; sourceTree = "<group>"; };
+		E81234550024 /* WaterIntakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterIntakeTests.swift; sourceTree = "<group>"; };
+		E81234550025 /* DailyProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyProgressTests.swift; sourceTree = "<group>"; };
+		E81234550026 /* UserSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsTests.swift; sourceTree = "<group>"; };
 		E81234520001 /* DrinkTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81234520002 /* DrinkTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +115,8 @@
 		E81234540005 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E81234540008 /* Models */,
+				E81234540009 /* Services */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -121,10 +137,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E81234540008 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550020 /* WaterIntake.swift */,
+				E81234550021 /* UserSettings.swift */,
+				E81234550022 /* DailyProgress.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E81234540009 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550023 /* WaterIntakeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E81234540010 /* DrinkTrackTests */ = {
 			isa = PBXGroup;
 			children = (
 				E81234550010 /* SampleTests.swift */,
+				E81234550024 /* WaterIntakeTests.swift */,
+				E81234550025 /* DailyProgressTests.swift */,
+				E81234550026 /* UserSettingsTests.swift */,
 			);
 			path = DrinkTrackTests;
 			sourceTree = "<group>";
@@ -223,6 +260,10 @@
 			files = (
 				E81234560002 /* ContentView.swift in Sources */,
 				E81234560001 /* DrinkTrackApp.swift in Sources */,
+				E81234560020 /* WaterIntake.swift in Sources */,
+				E81234560021 /* UserSettings.swift in Sources */,
+				E81234560022 /* DailyProgress.swift in Sources */,
+				E81234560023 /* WaterIntakeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E81234560010 /* SampleTests.swift in Sources */,
+				E81234560024 /* WaterIntakeTests.swift in Sources */,
+				E81234560025 /* DailyProgressTests.swift in Sources */,
+				E81234560026 /* UserSettingsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

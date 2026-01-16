@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct DrinkTrackApp: App {
@@ -6,5 +7,6 @@ struct DrinkTrackApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [WaterIntake.self, UserSettings.self])
     }
 }
