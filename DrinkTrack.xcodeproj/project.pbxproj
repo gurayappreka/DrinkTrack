@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E81234560001 /* DrinkTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550001 /* DrinkTrackApp.swift */; };
+		E81234560002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550002 /* ContentView.swift */; };
+		E81234560003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81234550003 /* Assets.xcassets */; };
+		E81234560004 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81234550004 /* Preview Assets.xcassets */; };
+		E81234560010 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550010 /* SampleTests.swift */; };
+		E81234560020 /* WaterIntake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550020 /* WaterIntake.swift */; };
+		E81234560021 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550021 /* UserSettings.swift */; };
+		E81234560022 /* DailyProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550022 /* DailyProgress.swift */; };
+		E81234560023 /* WaterIntakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550023 /* WaterIntakeService.swift */; };
+		E81234560024 /* WaterIntakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550024 /* WaterIntakeTests.swift */; };
+		E81234560025 /* DailyProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550025 /* DailyProgressTests.swift */; };
+		E81234560026 /* UserSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550026 /* UserSettingsTests.swift */; };
+		E81234560030 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550030 /* OnboardingView.swift */; };
+		E81234560031 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550031 /* OnboardingViewModel.swift */; };
+		E81234560032 /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550032 /* OnboardingViewModelTests.swift */; };
+		E81234560040 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550040 /* DashboardView.swift */; };
+		E81234560041 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550041 /* DashboardViewModel.swift */; };
+		E81234560042 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550042 /* ProgressRingView.swift */; };
+		E81234560043 /* QuickAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550043 /* QuickAddSection.swift */; };
+		E81234560044 /* TodayRecordsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550044 /* TodayRecordsSection.swift */; };
+		E81234560045 /* CustomAmountSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550045 /* CustomAmountSheet.swift */; };
+		E81234560046 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550046 /* CalendarView.swift */; };
+		E81234560047 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550047 /* SettingsView.swift */; };
+		E81234560048 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550048 /* DashboardViewModelTests.swift */; };
+		E81234560050 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550050 /* CalendarViewModel.swift */; };
+		E81234560051 /* MonthNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550051 /* MonthNavigationView.swift */; };
+		E81234560052 /* ContributionGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550052 /* ContributionGridView.swift */; };
+		E81234560053 /* StreakBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550053 /* StreakBadgeView.swift */; };
+		E81234560054 /* DayDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550054 /* DayDetailCard.swift */; };
+		E81234560055 /* ContributionLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550055 /* ContributionLegendView.swift */; };
+		E81234560056 /* CalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550056 /* CalendarViewModelTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E81234570001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E81234500000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E81234510001;
+			remoteInfo = DrinkTrack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E81234550001 /* DrinkTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTrackApp.swift; sourceTree = "<group>"; };
+		E81234550002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E81234550003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E81234550004 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E81234550010 /* SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTests.swift; sourceTree = "<group>"; };
+		E81234550020 /* WaterIntake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterIntake.swift; sourceTree = "<group>"; };
+		E81234550021 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		E81234550022 /* DailyProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyProgress.swift; sourceTree = "<group>"; };
+		E81234550023 /* WaterIntakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterIntakeService.swift; sourceTree = "<group>"; };
+		E81234550024 /* WaterIntakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterIntakeTests.swift; sourceTree = "<group>"; };
+		E81234550025 /* DailyProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyProgressTests.swift; sourceTree = "<group>"; };
+		E81234550026 /* UserSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsTests.swift; sourceTree = "<group>"; };
+		E81234550030 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		E81234550031 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		E81234550032 /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
+		E81234550040 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		E81234550041 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		E81234550042 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		E81234550043 /* QuickAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddSection.swift; sourceTree = "<group>"; };
+		E81234550044 /* TodayRecordsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecordsSection.swift; sourceTree = "<group>"; };
+		E81234550045 /* CustomAmountSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAmountSheet.swift; sourceTree = "<group>"; };
+		E81234550046 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		E81234550047 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E81234550048 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
+		E81234550050 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		E81234550051 /* MonthNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNavigationView.swift; sourceTree = "<group>"; };
+		E81234550052 /* ContributionGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionGridView.swift; sourceTree = "<group>"; };
+		E81234550053 /* StreakBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakBadgeView.swift; sourceTree = "<group>"; };
+		E81234550054 /* DayDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailCard.swift; sourceTree = "<group>"; };
+		E81234550055 /* ContributionLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionLegendView.swift; sourceTree = "<group>"; };
+		E81234550056 /* CalendarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModelTests.swift; sourceTree = "<group>"; };
+		E81234520001 /* DrinkTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E81234520002 /* DrinkTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E81234530001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E81234530002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E81234540000 = {
+			isa = PBXGroup;
+			children = (
+				E81234540001 /* DrinkTrack */,
+				E81234540010 /* DrinkTrackTests */,
+				E81234540002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E81234540001 /* DrinkTrack */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540003 /* App */,
+				E81234540004 /* Features */,
+				E81234540005 /* Core */,
+				E81234540006 /* Resources */,
+				E81234540007 /* Preview Content */,
+			);
+			path = DrinkTrack;
+			sourceTree = "<group>";
+		};
+		E81234540002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E81234520001 /* DrinkTrack.app */,
+				E81234520002 /* DrinkTrackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E81234540003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550001 /* DrinkTrackApp.swift */,
+				E81234550002 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E81234540004 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540011 /* Onboarding */,
+				E81234540014 /* Dashboard */,
+				E81234540020 /* Calendar */,
+				E81234540023 /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E81234540014 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540015 /* Views */,
+				E81234540016 /* ViewModels */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		E81234540015 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550040 /* DashboardView.swift */,
+				E81234540017 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E81234540016 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550041 /* DashboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E81234540017 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550042 /* ProgressRingView.swift */,
+				E81234550043 /* QuickAddSection.swift */,
+				E81234550044 /* TodayRecordsSection.swift */,
+				E81234550045 /* CustomAmountSheet.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E81234540020 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540021 /* Views */,
+				E81234540025 /* ViewModels */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		E81234540021 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550046 /* CalendarView.swift */,
+				E81234540026 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E81234540025 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550050 /* CalendarViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E81234540026 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550051 /* MonthNavigationView.swift */,
+				E81234550052 /* ContributionGridView.swift */,
+				E81234550053 /* StreakBadgeView.swift */,
+				E81234550054 /* DayDetailCard.swift */,
+				E81234550055 /* ContributionLegendView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E81234540023 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540024 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E81234540024 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550047 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E81234540011 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540012 /* Views */,
+				E81234540013 /* ViewModels */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E81234540012 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550030 /* OnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E81234540013 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550031 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E81234540005 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540008 /* Models */,
+				E81234540009 /* Services */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E81234540006 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550003 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E81234540007 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550004 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E81234540008 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550020 /* WaterIntake.swift */,
+				E81234550021 /* UserSettings.swift */,
+				E81234550022 /* DailyProgress.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E81234540009 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550023 /* WaterIntakeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E81234540010 /* DrinkTrackTests */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550010 /* SampleTests.swift */,
+				E81234550024 /* WaterIntakeTests.swift */,
+				E81234550025 /* DailyProgressTests.swift */,
+				E81234550026 /* UserSettingsTests.swift */,
+				E81234550032 /* OnboardingViewModelTests.swift */,
+				E81234550048 /* DashboardViewModelTests.swift */,
+				E81234550056 /* CalendarViewModelTests.swift */,
+			);
+			path = DrinkTrackTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E81234510001 /* DrinkTrack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E81234580001 /* Build configuration list for PBXNativeTarget "DrinkTrack" */;
+			buildPhases = (
+				E81234530003 /* Sources */,
+				E81234530001 /* Frameworks */,
+				E81234530004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrinkTrack;
+			productName = DrinkTrack;
+			productReference = E81234520001 /* DrinkTrack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E81234510002 /* DrinkTrackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E81234580002 /* Build configuration list for PBXNativeTarget "DrinkTrackTests" */;
+			buildPhases = (
+				E81234530005 /* Sources */,
+				E81234530002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E81234570002 /* PBXTargetDependency */,
+			);
+			name = DrinkTrackTests;
+			productName = DrinkTrackTests;
+			productReference = E81234520002 /* DrinkTrackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E81234500000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E81234510001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					E81234510002 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E81234510001;
+					};
+				};
+			};
+			buildConfigurationList = E81234580000 /* Build configuration list for PBXProject "DrinkTrack" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E81234540000;
+			productRefGroup = E81234540002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E81234510001 /* DrinkTrack */,
+				E81234510002 /* DrinkTrackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E81234530004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E81234560004 /* Preview Assets.xcassets in Resources */,
+				E81234560003 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E81234530003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E81234560002 /* ContentView.swift in Sources */,
+				E81234560001 /* DrinkTrackApp.swift in Sources */,
+				E81234560020 /* WaterIntake.swift in Sources */,
+				E81234560021 /* UserSettings.swift in Sources */,
+				E81234560022 /* DailyProgress.swift in Sources */,
+				E81234560023 /* WaterIntakeService.swift in Sources */,
+				E81234560030 /* OnboardingView.swift in Sources */,
+				E81234560031 /* OnboardingViewModel.swift in Sources */,
+				E81234560040 /* DashboardView.swift in Sources */,
+				E81234560041 /* DashboardViewModel.swift in Sources */,
+				E81234560042 /* ProgressRingView.swift in Sources */,
+				E81234560043 /* QuickAddSection.swift in Sources */,
+				E81234560044 /* TodayRecordsSection.swift in Sources */,
+				E81234560045 /* CustomAmountSheet.swift in Sources */,
+				E81234560046 /* CalendarView.swift in Sources */,
+				E81234560047 /* SettingsView.swift in Sources */,
+				E81234560050 /* CalendarViewModel.swift in Sources */,
+				E81234560051 /* MonthNavigationView.swift in Sources */,
+				E81234560052 /* ContributionGridView.swift in Sources */,
+				E81234560053 /* StreakBadgeView.swift in Sources */,
+				E81234560054 /* DayDetailCard.swift in Sources */,
+				E81234560055 /* ContributionLegendView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E81234530005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E81234560010 /* SampleTests.swift in Sources */,
+				E81234560024 /* WaterIntakeTests.swift in Sources */,
+				E81234560025 /* DailyProgressTests.swift in Sources */,
+				E81234560026 /* UserSettingsTests.swift in Sources */,
+				E81234560032 /* OnboardingViewModelTests.swift in Sources */,
+				E81234560048 /* DashboardViewModelTests.swift in Sources */,
+				E81234560056 /* CalendarViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E81234570002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E81234510001 /* DrinkTrack */;
+			targetProxy = E81234570001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E81234590001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E81234590002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E81234590003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DrinkTrack/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drinktrack.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E81234590004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DrinkTrack/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drinktrack.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E81234590005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drinktrack.DrinkTrackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrinkTrack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DrinkTrack";
+			};
+			name = Debug;
+		};
+		E81234590006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drinktrack.DrinkTrackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrinkTrack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DrinkTrack";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E81234580000 /* Build configuration list for PBXProject "DrinkTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E81234590001 /* Debug */,
+				E81234590002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E81234580001 /* Build configuration list for PBXNativeTarget "DrinkTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E81234590003 /* Debug */,
+				E81234590004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E81234580002 /* Build configuration list for PBXNativeTarget "DrinkTrackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E81234590005 /* Debug */,
+				E81234590006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E81234500000 /* Project object */;
+}
