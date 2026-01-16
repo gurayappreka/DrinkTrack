@@ -19,6 +19,9 @@
 		E81234560024 /* WaterIntakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550024 /* WaterIntakeTests.swift */; };
 		E81234560025 /* DailyProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550025 /* DailyProgressTests.swift */; };
 		E81234560026 /* UserSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550026 /* UserSettingsTests.swift */; };
+		E81234560030 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550030 /* OnboardingView.swift */; };
+		E81234560031 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550031 /* OnboardingViewModel.swift */; };
+		E81234560032 /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550032 /* OnboardingViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		E81234550024 /* WaterIntakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterIntakeTests.swift; sourceTree = "<group>"; };
 		E81234550025 /* DailyProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyProgressTests.swift; sourceTree = "<group>"; };
 		E81234550026 /* UserSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsTests.swift; sourceTree = "<group>"; };
+		E81234550030 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		E81234550031 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		E81234550032 /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
 		E81234520001 /* DrinkTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81234520002 /* DrinkTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,8 +114,34 @@
 		E81234540004 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E81234540011 /* Onboarding */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		E81234540011 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540012 /* Views */,
+				E81234540013 /* ViewModels */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E81234540012 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550030 /* OnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E81234540013 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550031 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E81234540005 /* Core */ = {
@@ -162,6 +194,7 @@
 				E81234550024 /* WaterIntakeTests.swift */,
 				E81234550025 /* DailyProgressTests.swift */,
 				E81234550026 /* UserSettingsTests.swift */,
+				E81234550032 /* OnboardingViewModelTests.swift */,
 			);
 			path = DrinkTrackTests;
 			sourceTree = "<group>";
@@ -264,6 +297,8 @@
 				E81234560021 /* UserSettings.swift in Sources */,
 				E81234560022 /* DailyProgress.swift in Sources */,
 				E81234560023 /* WaterIntakeService.swift in Sources */,
+				E81234560030 /* OnboardingView.swift in Sources */,
+				E81234560031 /* OnboardingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +310,7 @@
 				E81234560024 /* WaterIntakeTests.swift in Sources */,
 				E81234560025 /* DailyProgressTests.swift in Sources */,
 				E81234560026 /* UserSettingsTests.swift in Sources */,
+				E81234560032 /* OnboardingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
