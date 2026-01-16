@@ -50,11 +50,13 @@ struct MonthNavigationView: View {
             onNext: {}
         )
 
-        MonthNavigationView(
-            currentMonth: Calendar.current.date(byAdding: .month, value: -1, to: Date())!,
-            onPrevious: {},
-            onNext: {}
-        )
+        if let lastMonth = Calendar.current.date(byAdding: .month, value: -1, to: Date()) {
+            MonthNavigationView(
+                currentMonth: lastMonth,
+                onPrevious: {},
+                onNext: {}
+            )
+        }
     }
     .padding()
 }

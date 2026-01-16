@@ -40,7 +40,9 @@ class CalendarViewModel {
 
         while currentDate <= monthEnd && currentDate <= Date() {
             let dayStart = calendar.startOfDay(for: currentDate)
-            let dayEnd = calendar.date(byAdding: .day, value: 1, to: dayStart)!
+            guard let dayEnd = calendar.date(byAdding: .day, value: 1, to: dayStart) else {
+                break
+            }
 
             let descriptor = FetchDescriptor<WaterIntake>(
                 predicate: #Predicate { intake in
@@ -56,7 +58,10 @@ class CalendarViewModel {
                 days.append(DailyProgress(date: currentDate, totalAmount: 0, goal: dailyGoal))
             }
 
-            currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
+            guard let nextDate = calendar.date(byAdding: .day, value: 1, to: currentDate) else {
+                break
+            }
+            currentDate = nextDate
         }
 
         monthlyProgress = days
@@ -66,13 +71,19 @@ class CalendarViewModel {
     @MainActor
     private func calculateStreak(modelContext: ModelContext) {
         var streak = 0
-        var checkDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
+        guard var checkDate = Calendar.current.date(byAdding: .day, value: -1, to: Date()) else {
+            currentStreak = 0
+            return
+        }
 
         while true {
             guard let progress = getProgressForDate(checkDate, modelContext: modelContext) else { break }
             if progress.isGoalMet {
                 streak += 1
-                checkDate = Calendar.current.date(byAdding: .day, value: -1, to: checkDate)!
+                guard let previousDate = Calendar.current.date(byAdding: .day, value: -1, to: checkDate) else {
+                    break
+                }
+                checkDate = previousDate
             } else {
                 break
             }
@@ -91,7 +102,9 @@ class CalendarViewModel {
     private func getProgressForDate(_ date: Date, modelContext: ModelContext) -> DailyProgress? {
         let calendar = Calendar.current
         let dayStart = calendar.startOfDay(for: date)
-        let dayEnd = calendar.date(byAdding: .day, value: 1, to: dayStart)!
+        guard let dayEnd = calendar.date(byAdding: .day, value: 1, to: dayStart) else {
+            return nil
+        }
 
         let descriptor = FetchDescriptor<WaterIntake>(
             predicate: #Predicate { intake in

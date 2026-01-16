@@ -31,7 +31,7 @@ struct ContributionGridView: View {
                 ForEach(monthData) { progress in
                     ContributionCell(
                         progress: progress,
-                        isSelected: selectedDate != nil && Calendar.current.isDate(selectedDate!, inSameDayAs: progress.date),
+                        isSelected: selectedDate.map { Calendar.current.isDate($0, inSameDayAs: progress.date) } ?? false,
                         onTap: {
                             withAnimation(.easeInOut(duration: 0.2)) {
                                 selectedDate = progress.date
@@ -94,9 +94,12 @@ struct ContributionCell: View {
 }
 
 #Preview {
-    let sampleData = (1...15).map { day in
-        DailyProgress(
-            date: Calendar.current.date(byAdding: .day, value: -day, to: Date())!,
+    let sampleData = (1...15).compactMap { day -> DailyProgress? in
+        guard let date = Calendar.current.date(byAdding: .day, value: -day, to: Date()) else {
+            return nil
+        }
+        return DailyProgress(
+            date: date,
             totalAmount: Int.random(in: 0...2500),
             goal: 2000
         )

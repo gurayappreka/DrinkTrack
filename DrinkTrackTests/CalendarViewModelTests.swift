@@ -3,13 +3,13 @@ import XCTest
 
 final class CalendarViewModelTests: XCTestCase {
 
-    func testPreviousMonthNavigation() {
+    func testPreviousMonthNavigation() throws {
         let viewModel = CalendarViewModel()
         let initialMonth = viewModel.currentMonth
         viewModel.previousMonth()
 
         let calendar = Calendar.current
-        let expectedMonth = calendar.date(byAdding: .month, value: -1, to: initialMonth)!
+        let expectedMonth = try XCTUnwrap(calendar.date(byAdding: .month, value: -1, to: initialMonth))
 
         XCTAssertTrue(calendar.isDate(viewModel.currentMonth, equalTo: expectedMonth, toGranularity: .month))
     }
@@ -25,16 +25,16 @@ final class CalendarViewModelTests: XCTestCase {
         XCTAssertTrue(calendar.isDate(viewModel.currentMonth, equalTo: initialMonth, toGranularity: .month))
     }
 
-    func testNextMonthAllowedForPastMonth() {
+    func testNextMonthAllowedForPastMonth() throws {
         let viewModel = CalendarViewModel()
         let calendar = Calendar.current
         // Set to 2 months ago
-        let twoMonthsAgo = calendar.date(byAdding: .month, value: -2, to: Date())!
+        let twoMonthsAgo = try XCTUnwrap(calendar.date(byAdding: .month, value: -2, to: Date()))
         viewModel.currentMonth = twoMonthsAgo
 
         viewModel.nextMonth()
 
-        let expectedMonth = calendar.date(byAdding: .month, value: -1, to: Date())!
+        let expectedMonth = try XCTUnwrap(calendar.date(byAdding: .month, value: -1, to: Date()))
         XCTAssertTrue(calendar.isDate(viewModel.currentMonth, equalTo: expectedMonth, toGranularity: .month))
     }
 
@@ -71,7 +71,7 @@ final class CalendarViewModelTests: XCTestCase {
         XCTAssertEqual(result?.totalAmount, 1500)
     }
 
-    func testMultiplePreviousMonthNavigations() {
+    func testMultiplePreviousMonthNavigations() throws {
         let viewModel = CalendarViewModel()
         let calendar = Calendar.current
 
@@ -79,7 +79,7 @@ final class CalendarViewModelTests: XCTestCase {
         viewModel.previousMonth()
         viewModel.previousMonth()
 
-        let expectedMonth = calendar.date(byAdding: .month, value: -3, to: Date())!
+        let expectedMonth = try XCTUnwrap(calendar.date(byAdding: .month, value: -3, to: Date()))
         XCTAssertTrue(calendar.isDate(viewModel.currentMonth, equalTo: expectedMonth, toGranularity: .month))
     }
 
