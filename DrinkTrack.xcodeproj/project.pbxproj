@@ -31,6 +31,13 @@
 		E81234560046 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550046 /* CalendarView.swift */; };
 		E81234560047 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550047 /* SettingsView.swift */; };
 		E81234560048 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550048 /* DashboardViewModelTests.swift */; };
+		E81234560050 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550050 /* CalendarViewModel.swift */; };
+		E81234560051 /* MonthNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550051 /* MonthNavigationView.swift */; };
+		E81234560052 /* ContributionGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550052 /* ContributionGridView.swift */; };
+		E81234560053 /* StreakBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550053 /* StreakBadgeView.swift */; };
+		E81234560054 /* DayDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550054 /* DayDetailCard.swift */; };
+		E81234560055 /* ContributionLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550055 /* ContributionLegendView.swift */; };
+		E81234560056 /* CalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550056 /* CalendarViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +75,13 @@
 		E81234550046 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		E81234550047 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E81234550048 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
+		E81234550050 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		E81234550051 /* MonthNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNavigationView.swift; sourceTree = "<group>"; };
+		E81234550052 /* ContributionGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionGridView.swift; sourceTree = "<group>"; };
+		E81234550053 /* StreakBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakBadgeView.swift; sourceTree = "<group>"; };
+		E81234550054 /* DayDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailCard.swift; sourceTree = "<group>"; };
+		E81234550055 /* ContributionLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionLegendView.swift; sourceTree = "<group>"; };
+		E81234550056 /* CalendarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModelTests.swift; sourceTree = "<group>"; };
 		E81234520001 /* DrinkTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81234520002 /* DrinkTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				E81234540021 /* Views */,
+				E81234540025 /* ViewModels */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -189,8 +204,29 @@
 			isa = PBXGroup;
 			children = (
 				E81234550046 /* CalendarView.swift */,
+				E81234540026 /* Components */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E81234540025 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550050 /* CalendarViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E81234540026 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550051 /* MonthNavigationView.swift */,
+				E81234550052 /* ContributionGridView.swift */,
+				E81234550053 /* StreakBadgeView.swift */,
+				E81234550054 /* DayDetailCard.swift */,
+				E81234550055 /* ContributionLegendView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E81234540023 /* Settings */ = {
@@ -286,6 +322,7 @@
 				E81234550026 /* UserSettingsTests.swift */,
 				E81234550032 /* OnboardingViewModelTests.swift */,
 				E81234550048 /* DashboardViewModelTests.swift */,
+				E81234550056 /* CalendarViewModelTests.swift */,
 			);
 			path = DrinkTrackTests;
 			sourceTree = "<group>";
@@ -398,6 +435,12 @@
 				E81234560045 /* CustomAmountSheet.swift in Sources */,
 				E81234560046 /* CalendarView.swift in Sources */,
 				E81234560047 /* SettingsView.swift in Sources */,
+				E81234560050 /* CalendarViewModel.swift in Sources */,
+				E81234560051 /* MonthNavigationView.swift in Sources */,
+				E81234560052 /* ContributionGridView.swift in Sources */,
+				E81234560053 /* StreakBadgeView.swift in Sources */,
+				E81234560054 /* DayDetailCard.swift in Sources */,
+				E81234560055 /* ContributionLegendView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +454,7 @@
 				E81234560026 /* UserSettingsTests.swift in Sources */,
 				E81234560032 /* OnboardingViewModelTests.swift in Sources */,
 				E81234560048 /* DashboardViewModelTests.swift in Sources */,
+				E81234560056 /* CalendarViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
