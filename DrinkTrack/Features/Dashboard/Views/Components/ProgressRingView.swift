@@ -51,9 +51,9 @@ struct ProgressRingView: View {
                 animatedProgress = min(progress, 1.0)
             }
         }
-        .onChange(of: progress) { _, newValue in
+        .onChange(of: progress) {
             withAnimation(.easeOut(duration: 0.3)) {
-                animatedProgress = min(newValue, 1.0)
+                animatedProgress = min(progress, 1.0)
             }
         }
     }

@@ -33,7 +33,7 @@ struct CustomAmountSheet: View {
                     }
                 }
                 .buttonStyle(.borderedProminent)
-                .disabled(customAmount == nil || customAmount! <= 0)
+                .disabled((customAmount ?? 0) <= 0)
             }
         }
         .padding()
