@@ -13,19 +13,6 @@ struct ContentView: View {
     }
 }
 
-// MARK: - Placeholder Dashboard View
-struct DashboardView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "drop.fill")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("DrinkTrack Dashboard")
-        }
-        .padding()
-    }
-}
-
 #Preview {
     ContentView()
 }

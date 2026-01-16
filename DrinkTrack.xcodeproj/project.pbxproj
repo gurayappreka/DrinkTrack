@@ -22,6 +22,15 @@
 		E81234560030 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550030 /* OnboardingView.swift */; };
 		E81234560031 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550031 /* OnboardingViewModel.swift */; };
 		E81234560032 /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550032 /* OnboardingViewModelTests.swift */; };
+		E81234560040 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550040 /* DashboardView.swift */; };
+		E81234560041 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550041 /* DashboardViewModel.swift */; };
+		E81234560042 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550042 /* ProgressRingView.swift */; };
+		E81234560043 /* QuickAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550043 /* QuickAddSection.swift */; };
+		E81234560044 /* TodayRecordsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550044 /* TodayRecordsSection.swift */; };
+		E81234560045 /* CustomAmountSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550045 /* CustomAmountSheet.swift */; };
+		E81234560046 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550046 /* CalendarView.swift */; };
+		E81234560047 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550047 /* SettingsView.swift */; };
+		E81234560048 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550048 /* DashboardViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +59,15 @@
 		E81234550030 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E81234550031 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		E81234550032 /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
+		E81234550040 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		E81234550041 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		E81234550042 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		E81234550043 /* QuickAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddSection.swift; sourceTree = "<group>"; };
+		E81234550044 /* TodayRecordsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecordsSection.swift; sourceTree = "<group>"; };
+		E81234550045 /* CustomAmountSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAmountSheet.swift; sourceTree = "<group>"; };
+		E81234550046 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		E81234550047 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E81234550048 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
 		E81234520001 /* DrinkTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81234520002 /* DrinkTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,8 +133,80 @@
 			isa = PBXGroup;
 			children = (
 				E81234540011 /* Onboarding */,
+				E81234540014 /* Dashboard */,
+				E81234540020 /* Calendar */,
+				E81234540023 /* Settings */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		E81234540014 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540015 /* Views */,
+				E81234540016 /* ViewModels */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		E81234540015 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550040 /* DashboardView.swift */,
+				E81234540017 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E81234540016 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550041 /* DashboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E81234540017 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550042 /* ProgressRingView.swift */,
+				E81234550043 /* QuickAddSection.swift */,
+				E81234550044 /* TodayRecordsSection.swift */,
+				E81234550045 /* CustomAmountSheet.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E81234540020 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540021 /* Views */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		E81234540021 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550046 /* CalendarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E81234540023 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E81234540024 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E81234540024 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E81234550047 /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E81234540011 /* Onboarding */ = {
@@ -195,6 +285,7 @@
 				E81234550025 /* DailyProgressTests.swift */,
 				E81234550026 /* UserSettingsTests.swift */,
 				E81234550032 /* OnboardingViewModelTests.swift */,
+				E81234550048 /* DashboardViewModelTests.swift */,
 			);
 			path = DrinkTrackTests;
 			sourceTree = "<group>";
@@ -299,6 +390,14 @@
 				E81234560023 /* WaterIntakeService.swift in Sources */,
 				E81234560030 /* OnboardingView.swift in Sources */,
 				E81234560031 /* OnboardingViewModel.swift in Sources */,
+				E81234560040 /* DashboardView.swift in Sources */,
+				E81234560041 /* DashboardViewModel.swift in Sources */,
+				E81234560042 /* ProgressRingView.swift in Sources */,
+				E81234560043 /* QuickAddSection.swift in Sources */,
+				E81234560044 /* TodayRecordsSection.swift in Sources */,
+				E81234560045 /* CustomAmountSheet.swift in Sources */,
+				E81234560046 /* CalendarView.swift in Sources */,
+				E81234560047 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +410,7 @@
 				E81234560025 /* DailyProgressTests.swift in Sources */,
 				E81234560026 /* UserSettingsTests.swift in Sources */,
 				E81234560032 /* OnboardingViewModelTests.swift in Sources */,
+				E81234560048 /* DashboardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
