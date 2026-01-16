@@ -61,7 +61,7 @@ struct QuickAddButton: View {
     @State private var isPressed = false
 
     var body: some View {
-        Button(action: {
+        Button {
             withAnimation(.easeInOut(duration: 0.1)) {
                 isPressed = true
             }
@@ -69,7 +69,7 @@ struct QuickAddButton: View {
                 isPressed = false
                 action()
             }
-        }) {
+        } label: {
             VStack(spacing: 4) {
                 Image(systemName: icon)
                     .font(.title2)
