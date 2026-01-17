@@ -6,40 +6,37 @@ struct CustomAmountSheet: View {
     @State private var customAmount: Int?
 
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Özel Miktar")
-                .font(.headline)
+        DTBottomSheet(
+            title: "Ozel Miktar",
+            onClose: { dismiss() },
+            content: {
+                VStack(spacing: 24) {
+                    DTTextField("Miktar girin", value: $customAmount, suffix: "ml")
 
-            HStack {
-                TextField("Miktar", value: $customAmount, format: .number)
-                    .textFieldStyle(.roundedBorder)
-                    .keyboardType(.numberPad)
-
-                Text("ml")
-                    .foregroundStyle(Color("TextSecondary"))
-            }
-            .padding(.horizontal)
-
-            HStack(spacing: 16) {
-                Button("İptal") {
-                    dismiss()
+                    DTButton(
+                        "Ekle",
+                        style: .primary,
+                        size: .large,
+                        isFullWidth: true,
+                        isDisabled: (customAmount ?? 0) <= 0,
+                        action: {
+                            if let amount = customAmount, amount > 0 {
+                                onAdd(amount)
+                                dismiss()
+                            }
+                        }
+                    )
                 }
-                .buttonStyle(.bordered)
-
-                Button("Ekle") {
-                    if let amount = customAmount, amount > 0 {
-                        onAdd(amount)
-                        dismiss()
-                    }
-                }
-                .buttonStyle(.borderedProminent)
-                .disabled((customAmount ?? 0) <= 0)
             }
-        }
-        .padding()
+        )
+        .presentationDetents([.height(220)])
+        .presentationDragIndicator(.visible)
     }
 }
 
 #Preview {
-    CustomAmountSheet(onAdd: { _ in })
+    Text("Preview")
+        .sheet(isPresented: .constant(true)) {
+            CustomAmountSheet(onAdd: { _ in })
+        }
 }
