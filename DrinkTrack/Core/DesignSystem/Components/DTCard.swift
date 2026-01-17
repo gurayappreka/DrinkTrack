@@ -9,7 +9,7 @@ struct DTCard<Content: View>: View {
 
     var body: some View {
         content
-            .padding(20)
+            .padding(DTSpacing.cardPadding)
             .background(Color("CardColor"))
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .shadow(color: .black.opacity(0.05), radius: 4, y: 2)
@@ -51,15 +51,13 @@ struct DTCardRow: View {
                         .frame(width: 28)
 
                     Text(title)
-                        .font(.body)
-                        .foregroundStyle(Color("TextPrimary"))
+                        .dtCardTitle()
 
                     Spacer()
 
                     if let value = value {
                         Text(value)
-                            .font(.body)
-                            .foregroundStyle(Color("TextSecondary"))
+                            .dtCardValue()
                     }
 
                     if showChevron {
@@ -68,7 +66,7 @@ struct DTCardRow: View {
                             .foregroundStyle(Color("TextSecondary"))
                     }
                 }
-                .frame(minHeight: 52)
+                .frame(minHeight: DTSpacing.cardRowHeight)
                 .contentShape(Rectangle())
             }
         )
@@ -87,31 +85,31 @@ struct DTCardSection: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DTSpacing.sectionTitleSpacing) {
             if let title = title {
                 Text(title)
-                    .font(.subheadline)
-                    .fontWeight(.medium)
-                    .foregroundStyle(Color("TextSecondary"))
+                    .dtSectionTitle()
                     .padding(.horizontal, 4)
             }
 
             DTCard(
                 content: {
-                    VStack(spacing: 0) {
+                    VStack(spacing: DTSpacing.statsItemSpacing) {
                         ForEach(Array(rows.enumerated()), id: \.element.id) { index, row in
-                            DTCardRow(
-                                icon: row.icon,
-                                iconColor: row.iconColor,
-                                title: row.title,
-                                value: row.value,
-                                showChevron: row.showChevron,
-                                action: row.action
-                            )
+                            VStack(spacing: DTSpacing.statsItemSpacing) {
+                                DTCardRow(
+                                    icon: row.icon,
+                                    iconColor: row.iconColor,
+                                    title: row.title,
+                                    value: row.value,
+                                    showChevron: row.showChevron,
+                                    action: row.action
+                                )
 
-                            if index < rows.count - 1 {
-                                Divider()
-                                    .padding(.leading, 44)
+                                if index < rows.count - 1 {
+                                    Divider()
+                                        .padding(.leading, 44)
+                                }
                             }
                         }
                     }

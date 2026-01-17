@@ -48,16 +48,14 @@ struct SettingsView: View {
 
     // MARK: - Goal Section
     private var goalSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: DTSpacing.sectionTitleSpacing) {
             Text("Hedef Ayarlari")
-                .font(.subheadline)
-                .fontWeight(.medium)
-                .foregroundStyle(Color("TextSecondary"))
+                .dtSectionTitle()
                 .padding(.horizontal, 4)
 
             DTCard(
                 content: {
-                    VStack(spacing: 20) {
+                    VStack(spacing: DTSpacing.statsItemSpacing) {
                         // Current Goal Display
                         HStack {
                             Image(systemName: "target")
@@ -66,8 +64,7 @@ struct SettingsView: View {
                                 .frame(width: 28)
 
                             Text("Gunluk Hedef")
-                                .font(.body)
-                                .foregroundStyle(Color("TextPrimary"))
+                                .dtCardTitle()
 
                             Spacer()
 
@@ -75,7 +72,7 @@ struct SettingsView: View {
                                 .font(.body.weight(.semibold))
                                 .foregroundStyle(Color("PrimaryBlue"))
                         }
-                        .frame(minHeight: 52)
+                        .frame(minHeight: DTSpacing.cardRowHeight)
 
                         Divider()
 
@@ -87,8 +84,7 @@ struct SettingsView: View {
                                 .frame(width: 28)
 
                             Text("Hedefi Ayarla")
-                                .font(.body)
-                                .foregroundStyle(Color("TextPrimary"))
+                                .dtCardTitle()
 
                             Spacer()
 
@@ -105,17 +101,16 @@ struct SettingsView: View {
                                 }
                             }
                         }
-                        .frame(minHeight: 52)
+                        .frame(minHeight: DTSpacing.cardRowHeight)
 
                         Divider()
 
                         // Quick Presets
-                        VStack(alignment: .leading, spacing: 12) {
+                        VStack(alignment: .leading, spacing: DTSpacing.xs) {
                             Text("Hizli Secim")
-                                .font(.caption)
-                                .foregroundStyle(Color("TextSecondary"))
+                                .dtCardCaption()
 
-                            HStack(spacing: 12) {
+                            HStack(spacing: DTSpacing.sm) {
                                 ForEach([1500, 2000, 2500, 3000], id: \.self) { preset in
                                     Button(
                                         action: {
@@ -133,7 +128,7 @@ struct SettingsView: View {
                                                     : Color("TextPrimary")
                                                 )
                                                 .frame(maxWidth: .infinity)
-                                                .frame(height: 44)
+                                                .frame(height: 36)
                                                 .background(
                                                     viewModel.dailyGoal == preset
                                                     ? Color("PrimaryBlue")
@@ -180,47 +175,42 @@ struct SettingsView: View {
 
     // MARK: - Data Management Section
     private var dataManagementSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: DTSpacing.sectionTitleSpacing) {
             Text("Veri Yonetimi")
-                .font(.subheadline)
-                .fontWeight(.medium)
-                .foregroundStyle(Color("TextSecondary"))
+                .dtSectionTitle()
                 .padding(.horizontal, 4)
 
             DTCard(
                 content: {
-                    VStack(spacing: 0) {
-                        Button(
-                            action: { showResetConfirmation = true },
-                            label: {
-                                HStack(spacing: 16) {
-                                    Image(systemName: "trash")
-                                        .font(.title3)
-                                        .foregroundStyle(.red)
-                                        .frame(width: 28)
+                    Button(
+                        action: { showResetConfirmation = true },
+                        label: {
+                            HStack(spacing: DTSpacing.md) {
+                                Image(systemName: "trash")
+                                    .font(.title3)
+                                    .foregroundStyle(.red)
+                                    .frame(width: 28)
 
-                                    Text("Tum Verileri Sil")
-                                        .font(.body)
-                                        .foregroundStyle(.red)
+                                Text("Tum Verileri Sil")
+                                    .font(.body)
+                                    .foregroundStyle(.red)
 
-                                    Spacer()
+                                Spacer()
 
-                                    Image(systemName: "chevron.right")
-                                        .font(.caption)
-                                        .foregroundStyle(Color("TextSecondary"))
-                                }
-                                .frame(minHeight: 52)
-                                .contentShape(Rectangle())
+                                Image(systemName: "chevron.right")
+                                    .font(.caption)
+                                    .foregroundStyle(Color("TextSecondary"))
                             }
-                        )
-                        .buttonStyle(.plain)
-                    }
+                            .frame(minHeight: DTSpacing.cardRowHeight)
+                            .contentShape(Rectangle())
+                        }
+                    )
+                    .buttonStyle(.plain)
                 }
             )
 
             Text("Bu islem geri alinamaz. Tum su tuketim kayitlariniz silinecektir.")
-                .font(.caption)
-                .foregroundStyle(Color("TextSecondary"))
+                .dtCardCaption()
                 .padding(.horizontal, 4)
         }
     }
