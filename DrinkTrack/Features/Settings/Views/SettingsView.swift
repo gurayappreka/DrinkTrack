@@ -100,7 +100,9 @@ struct SettingsView: View {
                             )
                             .labelsHidden()
                             .onChange(of: viewModel.dailyGoal) { _, newValue in
-                                viewModel.updateGoal(newValue, modelContext: modelContext)
+                                Task { @MainActor in
+                                    viewModel.updateGoal(newValue, modelContext: modelContext)
+                                }
                             }
                         }
                         .frame(minHeight: 52)
@@ -118,7 +120,9 @@ struct SettingsView: View {
                                     Button(
                                         action: {
                                             viewModel.dailyGoal = preset
-                                            viewModel.updateGoal(preset, modelContext: modelContext)
+                                            Task { @MainActor in
+                                                viewModel.updateGoal(preset, modelContext: modelContext)
+                                            }
                                         },
                                         label: {
                                             Text("\(preset)")
