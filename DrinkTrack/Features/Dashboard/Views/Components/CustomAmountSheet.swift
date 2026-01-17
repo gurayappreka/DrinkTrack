@@ -6,24 +6,29 @@ struct CustomAmountSheet: View {
     @State private var customAmount: Int?
 
     var body: some View {
-        DTBottomSheet(title: "Ozel Miktar", onClose: { dismiss() }) {
-            VStack(spacing: 24) {
-                DTTextField("Miktar girin", value: $customAmount, suffix: "ml")
+        DTBottomSheet(
+            title: "Ozel Miktar",
+            onClose: { dismiss() },
+            content: {
+                VStack(spacing: 24) {
+                    DTTextField("Miktar girin", value: $customAmount, suffix: "ml")
 
-                DTButton(
-                    "Ekle",
-                    style: .primary,
-                    size: .large,
-                    isFullWidth: true,
-                    isDisabled: (customAmount ?? 0) <= 0
-                ) {
-                    if let amount = customAmount, amount > 0 {
-                        onAdd(amount)
-                        dismiss()
-                    }
+                    DTButton(
+                        "Ekle",
+                        style: .primary,
+                        size: .large,
+                        isFullWidth: true,
+                        isDisabled: (customAmount ?? 0) <= 0,
+                        action: {
+                            if let amount = customAmount, amount > 0 {
+                                onAdd(amount)
+                                dismiss()
+                            }
+                        }
+                    )
                 }
             }
-        }
+        )
         .presentationDetents([.height(220)])
         .presentationDragIndicator(.visible)
     }

@@ -26,14 +26,17 @@ struct DTBottomSheet<Content: View>: View {
 
                 Spacer()
 
-                Button(action: onClose) {
-                    Image(systemName: "xmark")
-                        .font(.body.weight(.medium))
-                        .foregroundStyle(Color("TextSecondary"))
-                        .frame(width: 32, height: 32)
-                        .background(Color("BackgroundColor"))
-                        .clipShape(Circle())
-                }
+                Button(
+                    action: onClose,
+                    label: {
+                        Image(systemName: "xmark")
+                            .font(.body.weight(.medium))
+                            .foregroundStyle(Color("TextSecondary"))
+                            .frame(width: 32, height: 32)
+                            .background(Color("BackgroundColor"))
+                            .clipShape(Circle())
+                    }
+                )
             }
             .padding(.horizontal, 24)
             .padding(.top, 24)
@@ -61,12 +64,16 @@ struct DTBottomSheet<Content: View>: View {
 
         VStack {
             Spacer()
-            DTBottomSheet(title: "Ozel Miktar", onClose: {}) {
-                VStack(spacing: 24) {
-                    DTTextField("Miktar", value: .constant(250), suffix: "ml")
-                    DTButton("Ekle", style: .primary, size: .large, isFullWidth: true) {}
+            DTBottomSheet(
+                title: "Ozel Miktar",
+                onClose: {},
+                content: {
+                    VStack(spacing: 24) {
+                        DTTextField("Miktar", value: .constant(250), suffix: "ml")
+                        DTButton("Ekle", style: .primary, size: .large, isFullWidth: true, action: {})
+                    }
                 }
-            }
+            )
         }
     }
 }

@@ -55,90 +55,95 @@ struct SettingsView: View {
                 .foregroundStyle(Color("TextSecondary"))
                 .padding(.horizontal, 4)
 
-            DTCard {
-                VStack(spacing: 20) {
-                    // Current Goal Display
-                    HStack {
-                        Image(systemName: "target")
-                            .font(.title3)
-                            .foregroundStyle(Color("PrimaryBlue"))
-                            .frame(width: 28)
+            DTCard(
+                content: {
+                    VStack(spacing: 20) {
+                        // Current Goal Display
+                        HStack {
+                            Image(systemName: "target")
+                                .font(.title3)
+                                .foregroundStyle(Color("PrimaryBlue"))
+                                .frame(width: 28)
 
-                        Text("Gunluk Hedef")
-                            .font(.body)
-                            .foregroundStyle(Color("TextPrimary"))
+                            Text("Gunluk Hedef")
+                                .font(.body)
+                                .foregroundStyle(Color("TextPrimary"))
 
-                        Spacer()
+                            Spacer()
 
-                        Text("\(viewModel.dailyGoal) ml")
-                            .font(.body.weight(.semibold))
-                            .foregroundStyle(Color("PrimaryBlue"))
-                    }
-                    .frame(minHeight: 52)
-
-                    Divider()
-
-                    // Stepper
-                    HStack {
-                        Image(systemName: "slider.horizontal.3")
-                            .font(.title3)
-                            .foregroundStyle(Color("PrimaryBlue"))
-                            .frame(width: 28)
-
-                        Text("Hedefi Ayarla")
-                            .font(.body)
-                            .foregroundStyle(Color("TextPrimary"))
-
-                        Spacer()
-
-                        Stepper(
-                            "",
-                            value: $viewModel.dailyGoal,
-                            in: 500...5000,
-                            step: 100
-                        )
-                        .labelsHidden()
-                        .onChange(of: viewModel.dailyGoal) { _, newValue in
-                            viewModel.updateGoal(newValue, modelContext: modelContext)
+                            Text("\(viewModel.dailyGoal) ml")
+                                .font(.body.weight(.semibold))
+                                .foregroundStyle(Color("PrimaryBlue"))
                         }
-                    }
-                    .frame(minHeight: 52)
+                        .frame(minHeight: 52)
 
-                    Divider()
+                        Divider()
 
-                    // Quick Presets
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("Hizli Secim")
-                            .font(.caption)
-                            .foregroundStyle(Color("TextSecondary"))
+                        // Stepper
+                        HStack {
+                            Image(systemName: "slider.horizontal.3")
+                                .font(.title3)
+                                .foregroundStyle(Color("PrimaryBlue"))
+                                .frame(width: 28)
 
-                        HStack(spacing: 12) {
-                            ForEach([1500, 2000, 2500, 3000], id: \.self) { preset in
-                                Button {
-                                    viewModel.dailyGoal = preset
-                                    viewModel.updateGoal(preset, modelContext: modelContext)
-                                } label: {
-                                    Text("\(preset)")
-                                        .font(.subheadline.weight(.medium))
-                                        .foregroundStyle(
-                                            viewModel.dailyGoal == preset
-                                            ? .white
-                                            : Color("TextPrimary")
-                                        )
-                                        .frame(maxWidth: .infinity)
-                                        .frame(height: 44)
-                                        .background(
-                                            viewModel.dailyGoal == preset
-                                            ? Color("PrimaryBlue")
-                                            : Color("BackgroundColor")
-                                        )
-                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                            Text("Hedefi Ayarla")
+                                .font(.body)
+                                .foregroundStyle(Color("TextPrimary"))
+
+                            Spacer()
+
+                            Stepper(
+                                "",
+                                value: $viewModel.dailyGoal,
+                                in: 500...5000,
+                                step: 100
+                            )
+                            .labelsHidden()
+                            .onChange(of: viewModel.dailyGoal) { _, newValue in
+                                viewModel.updateGoal(newValue, modelContext: modelContext)
+                            }
+                        }
+                        .frame(minHeight: 52)
+
+                        Divider()
+
+                        // Quick Presets
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Hizli Secim")
+                                .font(.caption)
+                                .foregroundStyle(Color("TextSecondary"))
+
+                            HStack(spacing: 12) {
+                                ForEach([1500, 2000, 2500, 3000], id: \.self) { preset in
+                                    Button(
+                                        action: {
+                                            viewModel.dailyGoal = preset
+                                            viewModel.updateGoal(preset, modelContext: modelContext)
+                                        },
+                                        label: {
+                                            Text("\(preset)")
+                                                .font(.subheadline.weight(.medium))
+                                                .foregroundStyle(
+                                                    viewModel.dailyGoal == preset
+                                                    ? .white
+                                                    : Color("TextPrimary")
+                                                )
+                                                .frame(maxWidth: .infinity)
+                                                .frame(height: 44)
+                                                .background(
+                                                    viewModel.dailyGoal == preset
+                                                    ? Color("PrimaryBlue")
+                                                    : Color("BackgroundColor")
+                                                )
+                                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                        }
+                                    )
                                 }
                             }
                         }
                     }
                 }
-            }
+            )
         }
     }
 
@@ -178,33 +183,36 @@ struct SettingsView: View {
                 .foregroundStyle(Color("TextSecondary"))
                 .padding(.horizontal, 4)
 
-            DTCard {
-                VStack(spacing: 0) {
-                    Button {
-                        showResetConfirmation = true
-                    } label: {
-                        HStack(spacing: 16) {
-                            Image(systemName: "trash")
-                                .font(.title3)
-                                .foregroundStyle(.red)
-                                .frame(width: 28)
+            DTCard(
+                content: {
+                    VStack(spacing: 0) {
+                        Button(
+                            action: { showResetConfirmation = true },
+                            label: {
+                                HStack(spacing: 16) {
+                                    Image(systemName: "trash")
+                                        .font(.title3)
+                                        .foregroundStyle(.red)
+                                        .frame(width: 28)
 
-                            Text("Tum Verileri Sil")
-                                .font(.body)
-                                .foregroundStyle(.red)
+                                    Text("Tum Verileri Sil")
+                                        .font(.body)
+                                        .foregroundStyle(.red)
 
-                            Spacer()
+                                    Spacer()
 
-                            Image(systemName: "chevron.right")
-                                .font(.caption)
-                                .foregroundStyle(Color("TextSecondary"))
-                        }
-                        .frame(minHeight: 52)
-                        .contentShape(Rectangle())
+                                    Image(systemName: "chevron.right")
+                                        .font(.caption)
+                                        .foregroundStyle(Color("TextSecondary"))
+                                }
+                                .frame(minHeight: 52)
+                                .contentShape(Rectangle())
+                            }
+                        )
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
                 }
-            }
+            )
 
             Text("Bu islem geri alinamaz. Tum su tuketim kayitlariniz silinecektir.")
                 .font(.caption)

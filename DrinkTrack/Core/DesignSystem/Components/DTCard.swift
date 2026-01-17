@@ -41,36 +41,37 @@ struct DTCardRow: View {
     }
 
     var body: some View {
-        Button {
-            action?()
-        } label: {
-            HStack(spacing: 16) {
-                Image(systemName: icon)
-                    .font(.title3)
-                    .foregroundStyle(iconColor)
-                    .frame(width: 28)
+        Button(
+            action: { action?() },
+            label: {
+                HStack(spacing: 16) {
+                    Image(systemName: icon)
+                        .font(.title3)
+                        .foregroundStyle(iconColor)
+                        .frame(width: 28)
 
-                Text(title)
-                    .font(.body)
-                    .foregroundStyle(Color("TextPrimary"))
-
-                Spacer()
-
-                if let value = value {
-                    Text(value)
+                    Text(title)
                         .font(.body)
-                        .foregroundStyle(Color("TextSecondary"))
-                }
+                        .foregroundStyle(Color("TextPrimary"))
 
-                if showChevron {
-                    Image(systemName: "chevron.right")
-                        .font(.caption)
-                        .foregroundStyle(Color("TextSecondary"))
+                    Spacer()
+
+                    if let value = value {
+                        Text(value)
+                            .font(.body)
+                            .foregroundStyle(Color("TextSecondary"))
+                    }
+
+                    if showChevron {
+                        Image(systemName: "chevron.right")
+                            .font(.caption)
+                            .foregroundStyle(Color("TextSecondary"))
+                    }
                 }
+                .frame(minHeight: 52)
+                .contentShape(Rectangle())
             }
-            .frame(minHeight: 52)
-            .contentShape(Rectangle())
-        }
+        )
         .buttonStyle(.plain)
         .disabled(action == nil)
     }
@@ -95,25 +96,27 @@ struct DTCardSection: View {
                     .padding(.horizontal, 4)
             }
 
-            DTCard {
-                VStack(spacing: 0) {
-                    ForEach(Array(rows.enumerated()), id: \.element.id) { index, row in
-                        DTCardRow(
-                            icon: row.icon,
-                            iconColor: row.iconColor,
-                            title: row.title,
-                            value: row.value,
-                            showChevron: row.showChevron,
-                            action: row.action
-                        )
+            DTCard(
+                content: {
+                    VStack(spacing: 0) {
+                        ForEach(Array(rows.enumerated()), id: \.element.id) { index, row in
+                            DTCardRow(
+                                icon: row.icon,
+                                iconColor: row.iconColor,
+                                title: row.title,
+                                value: row.value,
+                                showChevron: row.showChevron,
+                                action: row.action
+                            )
 
-                        if index < rows.count - 1 {
-                            Divider()
-                                .padding(.leading, 44)
+                            if index < rows.count - 1 {
+                                Divider()
+                                    .padding(.leading, 44)
+                            }
                         }
                     }
                 }
-            }
+            )
         }
     }
 }
