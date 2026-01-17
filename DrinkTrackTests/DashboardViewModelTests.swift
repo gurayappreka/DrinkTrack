@@ -52,4 +52,113 @@ final class DashboardViewModelTests: XCTestCase {
         viewModel.dailyGoal = 2000
         XCTAssertEqual(viewModel.progress, 0.125)
     }
+
+    // MARK: - Date Selection Tests
+
+    func testInitialSelectedDateIsToday() {
+        let viewModel = DashboardViewModel()
+        XCTAssertTrue(Calendar.current.isDateInToday(viewModel.selectedDate))
+    }
+
+    func testIsTodayReturnsTrueForToday() {
+        let viewModel = DashboardViewModel()
+        viewModel.selectedDate = Date()
+        XCTAssertTrue(viewModel.isToday)
+    }
+
+    func testIsTodayReturnsFalseForYesterday() {
+        let viewModel = DashboardViewModel()
+        guard let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date()) else {
+            XCTFail("Could not create yesterday date")
+            return
+        }
+        viewModel.selectedDate = yesterday
+        XCTAssertFalse(viewModel.isToday)
+    }
+
+    func testCanAddRecordsForToday() {
+        let viewModel = DashboardViewModel()
+        viewModel.selectedDate = Date()
+        XCTAssertTrue(viewModel.canAddRecords)
+    }
+
+    func testCanAddRecordsForYesterday() {
+        let viewModel = DashboardViewModel()
+        guard let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date()) else {
+            XCTFail("Could not create yesterday date")
+            return
+        }
+        viewModel.selectedDate = yesterday
+        XCTAssertTrue(viewModel.canAddRecords)
+    }
+
+    func testCanAddRecordsFor2DaysAgo() {
+        let viewModel = DashboardViewModel()
+        guard let twoDaysAgo = Calendar.current.date(byAdding: .day, value: -2, to: Date()) else {
+            XCTFail("Could not create date")
+            return
+        }
+        viewModel.selectedDate = twoDaysAgo
+        XCTAssertTrue(viewModel.canAddRecords)
+    }
+
+    func testCanAddRecordsFor3DaysAgo() {
+        let viewModel = DashboardViewModel()
+        guard let threeDaysAgo = Calendar.current.date(byAdding: .day, value: -3, to: Date()) else {
+            XCTFail("Could not create date")
+            return
+        }
+        viewModel.selectedDate = threeDaysAgo
+        XCTAssertTrue(viewModel.canAddRecords)
+    }
+
+    func testCannotAddRecordsFor4DaysAgo() {
+        let viewModel = DashboardViewModel()
+        guard let fourDaysAgo = Calendar.current.date(byAdding: .day, value: -4, to: Date()) else {
+            XCTFail("Could not create date")
+            return
+        }
+        viewModel.selectedDate = fourDaysAgo
+        XCTAssertFalse(viewModel.canAddRecords)
+    }
+
+    func testCannotAddRecordsForFuture() {
+        let viewModel = DashboardViewModel()
+        guard let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date()) else {
+            XCTFail("Could not create date")
+            return
+        }
+        viewModel.selectedDate = tomorrow
+        XCTAssertFalse(viewModel.canAddRecords)
+    }
+
+    func testSelectableDatesContains4Days() {
+        let viewModel = DashboardViewModel()
+        XCTAssertEqual(viewModel.selectableDates.count, 4)
+    }
+
+    func testSelectableDatesFirstIsToday() {
+        let viewModel = DashboardViewModel()
+        guard let firstDate = viewModel.selectableDates.first else {
+            XCTFail("Selectable dates is empty")
+            return
+        }
+        XCTAssertTrue(Calendar.current.isDateInToday(firstDate))
+    }
+
+    func testFormattedSelectedDateForToday() {
+        let viewModel = DashboardViewModel()
+        viewModel.selectedDate = Date()
+        XCTAssertEqual(viewModel.formattedSelectedDate, "Bugun")
+    }
+
+    func testFormattedSelectedDateForYesterday() {
+        let viewModel = DashboardViewModel()
+        guard let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date()) else {
+            XCTFail("Could not create yesterday date")
+            return
+        }
+        viewModel.selectedDate = yesterday
+        XCTAssertEqual(viewModel.formattedSelectedDate, "Dun")
+    }
 }

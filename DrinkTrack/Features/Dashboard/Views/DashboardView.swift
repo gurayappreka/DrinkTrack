@@ -10,6 +10,15 @@ struct DashboardView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 24) {
+                    // Date Selector
+                    DateSelectorView(
+                        selectedDate: viewModel.selectedDate,
+                        selectableDates: viewModel.selectableDates,
+                        onDateSelected: { date in
+                            viewModel.selectDate(date, modelContext: modelContext)
+                        }
+                    )
+
                     // Progress Ring
                     ProgressRingView(
                         progress: viewModel.progress,
@@ -19,13 +28,17 @@ struct DashboardView: View {
                     .frame(height: 280)
 
                     // Quick Add Buttons
-                    QuickAddSection(onAdd: { amount in
-                        viewModel.addIntake(amount: amount, modelContext: modelContext)
-                    })
+                    if viewModel.canAddRecords {
+                        QuickAddSection(onAdd: { amount in
+                            viewModel.addIntake(amount: amount, modelContext: modelContext)
+                        })
+                    }
 
-                    // Today's Records
-                    TodayRecordsSection(
+                    // Day's Records
+                    DayRecordsSection(
                         intakes: viewModel.todayIntakes,
+                        dateLabel: viewModel.formattedSelectedDate,
+                        canDelete: viewModel.canAddRecords,
                         onDelete: { intake in
                             viewModel.deleteIntake(intake, modelContext: modelContext)
                         }
@@ -52,7 +65,7 @@ struct DashboardView: View {
             if let userSettings = settings.first {
                 viewModel.dailyGoal = userSettings.dailyGoal
             }
-            viewModel.loadTodayData(modelContext: modelContext)
+            viewModel.loadDataForSelectedDate(modelContext: modelContext)
         }
     }
 }

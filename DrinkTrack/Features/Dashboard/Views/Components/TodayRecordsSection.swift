@@ -5,19 +5,39 @@ struct TodayRecordsSection: View {
     let onDelete: (WaterIntake) -> Void
 
     var body: some View {
+        DayRecordsSection(
+            intakes: intakes,
+            dateLabel: "Bugun",
+            canDelete: true,
+            onDelete: onDelete
+        )
+    }
+}
+
+struct DayRecordsSection: View {
+    let intakes: [WaterIntake]
+    let dateLabel: String
+    let canDelete: Bool
+    let onDelete: (WaterIntake) -> Void
+
+    var body: some View {
         VStack(spacing: 12) {
-            Text("Bugünün Kayıtları")
+            Text("\(dateLabel) - Kayitlar")
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             if intakes.isEmpty {
-                Text("Henüz kayıt yok")
+                Text("Henuz kayit yok")
                     .foregroundStyle(Color("TextSecondary"))
                     .frame(maxWidth: .infinity)
                     .padding()
             } else {
                 ForEach(intakes) { intake in
-                    IntakeRow(intake: intake, onDelete: { onDelete(intake) })
+                    IntakeRow(
+                        intake: intake,
+                        showDelete: canDelete,
+                        onDelete: { onDelete(intake) }
+                    )
                 }
             }
         }
@@ -30,6 +50,7 @@ struct TodayRecordsSection: View {
 
 struct IntakeRow: View {
     let intake: WaterIntake
+    var showDelete: Bool = true
     let onDelete: () -> Void
 
     var body: some View {
@@ -46,9 +67,11 @@ struct IntakeRow: View {
                 .font(.caption)
                 .foregroundStyle(Color("TextSecondary"))
 
-            Button(action: onDelete) {
-                Image(systemName: "xmark.circle.fill")
-                    .foregroundStyle(Color("TextSecondary"))
+            if showDelete {
+                Button(action: onDelete) {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(Color("TextSecondary"))
+                }
             }
         }
         .padding(.vertical, 8)

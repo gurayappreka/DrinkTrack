@@ -36,8 +36,8 @@ struct QuickAddSection: View {
                         Text("Özel")
                             .font(.caption)
                     }
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
+                    .frame(maxWidth: .infinity, minHeight: 70, maxHeight: 70)
+                    .padding(.vertical, 8)
                     .background(Color("CardColor"))
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .shadow(color: .black.opacity(0.05), radius: 2, y: 1)
@@ -79,8 +79,8 @@ struct QuickAddButton: View {
                     .font(.caption)
                     .foregroundStyle(Color("TextSecondary"))
             }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
+            .frame(maxWidth: .infinity, minHeight: 70, maxHeight: 70)
+            .padding(.vertical, 8)
             .background(Color("CardColor"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .shadow(color: .black.opacity(0.07), radius: 4, y: 2)
