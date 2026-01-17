@@ -27,12 +27,10 @@ struct DashboardView: View {
                     )
                     .frame(height: 280)
 
-                    // Quick Add Buttons
-                    if viewModel.canAddRecords {
-                        QuickAddSection(onAdd: { amount in
-                            viewModel.addIntake(amount: amount, modelContext: modelContext)
-                        })
-                    }
+                    // Quick Add Buttons (tüm seçilebilir günler için gösterilir)
+                    QuickAddSection(onAdd: { amount in
+                        viewModel.addIntake(amount: amount, modelContext: modelContext)
+                    })
 
                     // Day's Records
                     DayRecordsSection(
