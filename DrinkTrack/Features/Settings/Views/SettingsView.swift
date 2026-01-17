@@ -106,11 +106,11 @@ struct SettingsView: View {
                         Divider()
 
                         // Quick Presets
-                        VStack(alignment: .leading, spacing: DTSpacing.xs) {
+                        VStack(alignment: .leading, spacing: DTSpacing.extraSmall) {
                             Text("Hizli Secim")
                                 .dtCardCaption()
 
-                            HStack(spacing: DTSpacing.sm) {
+                            HStack(spacing: DTSpacing.small) {
                                 ForEach([1500, 2000, 2500, 3000], id: \.self) { preset in
                                     Button(
                                         action: {
@@ -185,7 +185,7 @@ struct SettingsView: View {
                     Button(
                         action: { showResetConfirmation = true },
                         label: {
-                            HStack(spacing: DTSpacing.md) {
+                            HStack(spacing: DTSpacing.medium) {
                                 Image(systemName: "trash")
                                     .font(.title3)
                                     .foregroundStyle(.red)
