@@ -61,20 +61,23 @@ struct DTButton: View {
     }
 
     var body: some View {
-        Button(action: action) {
-            Text(title)
-                .font(size.fontSize.weight(.semibold))
-                .foregroundStyle(foregroundColor)
-                .frame(maxWidth: isFullWidth ? .infinity : nil)
-                .frame(height: size.height)
-                .padding(.horizontal, isFullWidth ? 0 : size.horizontalPadding)
-                .background(backgroundColor)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(borderColor, lineWidth: style == .secondary ? 1.5 : 0)
-                )
-        }
+        Button(
+            action: action,
+            label: {
+                Text(title)
+                    .font(size.fontSize.weight(.semibold))
+                    .foregroundStyle(foregroundColor)
+                    .frame(maxWidth: isFullWidth ? .infinity : nil)
+                    .frame(height: size.height)
+                    .padding(.horizontal, isFullWidth ? 0 : size.horizontalPadding)
+                    .background(backgroundColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(borderColor, lineWidth: style == .secondary ? 1.5 : 0)
+                    )
+            }
+        )
         .disabled(isDisabled)
         .opacity(isDisabled ? 0.5 : 1.0)
     }

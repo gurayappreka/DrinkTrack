@@ -90,22 +90,25 @@ struct GoalButton: View {
     let action: () -> Void
 
     var body: some View {
-        Button(action: action) {
-            VStack(spacing: 4) {
-                Text("\(amount)")
-                    .font(.title2.bold())
-                Text("ml")
-                    .font(.caption)
+        Button(
+            action: action,
+            label: {
+                VStack(spacing: 4) {
+                    Text("\(amount)")
+                        .font(.title2.bold())
+                    Text("ml")
+                        .font(.caption)
+                }
+                .frame(width: 80, height: 70)
+                .background(isSelected ? Color("PrimaryBlue") : Color("CardColor"))
+                .foregroundStyle(isSelected ? .white : Color("TextPrimary"))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color("PrimaryBlue"), lineWidth: isSelected ? 0 : 1)
+                )
             }
-            .frame(width: 80, height: 70)
-            .background(isSelected ? Color("PrimaryBlue") : Color("CardColor"))
-            .foregroundStyle(isSelected ? .white : Color("TextPrimary"))
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color("PrimaryBlue"), lineWidth: isSelected ? 0 : 1)
-            )
-        }
+        )
         .scaleEffect(isSelected ? 1.05 : 1.0)
         .animation(Animation.easeInOut(duration: 0.2), value: isSelected)
     }
