@@ -107,7 +107,7 @@ struct GoalButton: View {
             )
         }
         .scaleEffect(isSelected ? 1.05 : 1.0)
-        .animation(.easeInOut(duration: 0.2), value: isSelected)
+        .animation(Animation.easeInOut(duration: 0.2), value: isSelected)
     }
 }
 

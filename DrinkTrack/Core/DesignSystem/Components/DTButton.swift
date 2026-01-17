@@ -115,13 +115,13 @@ struct DTButton: View {
 
 #Preview {
     VStack(spacing: 16) {
-        DTButton("Primary Large", style: .primary, size: .large) {}
-        DTButton("Primary Medium", style: .primary, size: .medium) {}
-        DTButton("Primary Small", style: .primary, size: .small) {}
-        DTButton("Secondary", style: .secondary) {}
-        DTButton("Destructive", style: .destructive) {}
-        DTButton("Full Width", style: .primary, size: .large, isFullWidth: true) {}
-        DTButton("Disabled", style: .primary, isDisabled: true) {}
+        DTButton("Primary Large", style: .primary, size: .large, action: {})
+        DTButton("Primary Medium", style: .primary, size: .medium, action: {})
+        DTButton("Primary Small", style: .primary, size: .small, action: {})
+        DTButton("Secondary", style: .secondary, action: {})
+        DTButton("Destructive", style: .destructive, action: {})
+        DTButton("Full Width", style: .primary, size: .large, isFullWidth: true, action: {})
+        DTButton("Disabled", style: .primary, isDisabled: true, action: {})
     }
     .padding()
 }
