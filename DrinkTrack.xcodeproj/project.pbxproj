@@ -40,6 +40,7 @@
 		E81234560056 /* CalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550056 /* CalendarViewModelTests.swift */; };
 		E81234560060 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550060 /* SettingsViewModel.swift */; };
 		E81234560061 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550061 /* SettingsViewModelTests.swift */; };
+		E81234560070 /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81234550070 /* DateSelectorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		E81234550056 /* CalendarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModelTests.swift; sourceTree = "<group>"; };
 		E81234550060 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		E81234550061 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
+		E81234550070 /* DateSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorView.swift; sourceTree = "<group>"; };
 		E81234520001 /* DrinkTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81234520002 /* DrinkTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -191,6 +193,7 @@
 				E81234550043 /* QuickAddSection.swift */,
 				E81234550044 /* TodayRecordsSection.swift */,
 				E81234550045 /* CustomAmountSheet.swift */,
+				E81234550070 /* DateSelectorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				E81234560054 /* DayDetailCard.swift in Sources */,
 				E81234560055 /* ContributionLegendView.swift in Sources */,
 				E81234560060 /* SettingsViewModel.swift in Sources */,
+				E81234560070 /* DateSelectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
